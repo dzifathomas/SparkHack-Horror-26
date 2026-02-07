@@ -294,14 +294,7 @@ button:hover {
     padding: 12px 22px;
     font-size: 14px;
 }
-.mirror-loop {
-    animation: flicker 2s infinite, drift 6s infinite alternate;
-}
 
-@keyframes drift {
-    from { letter-spacing: 1px; }
-    to { letter-spacing: 3px; }
-}
 .runaway-clone {
     position: fixed;
     padding: 10px 18px;
@@ -317,14 +310,6 @@ button:hover {
 
     box-shadow: 0 0 12px rgba(255,0,0,0.4);
     animation: shake 0.3s infinite;
-}
-
-@keyframes shake {
-    0% { transform: translate(0, 0); }
-    25% { transform: translate(1px, -1px); }
-    50% { transform: translate(-1px, 1px); }
-    75% { transform: translate(1px, 1px); }
-    100% { transform: translate(0, 0); }
 }
 
 .h1-box {

@@ -12,8 +12,8 @@
     padding: 40px 0;
 
     display: flex;
-    flex-direction: column;   /* 🔑 THIS LINE */
-    align-items: center;      /* replaces justify-content:center */
+    flex-direction: column;
+    align-items: center;     
 }
 
   
@@ -256,12 +256,12 @@
 }
 
 .next-day-container {
-  text-align: left;     /* centers it like the screenshot */
+  text-align: left;   
   margin-top: 40px;
 }
 
 #nextDayButton {
-  background-color: transparent;   /* 🔑 removes white fill */
+  background-color: transparent;  
   color: #cfcfcf;
 
   border: 1px solid #444;
