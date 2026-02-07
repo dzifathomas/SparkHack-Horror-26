@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="blog4.css" />
+  <title>DAY 4: Mirror Realm</title>
+</head>
+
+<body>
+  <div class="page">
+    <h1 class="h1-box">DAY 4: “Mirror Realm”</h1>
+
+    <div class="post-meta">
+      <div><b>Posted:</b> Thursday, October 26 • 10:15 PM</div>
+      <div><b>Camera:</b> Front-facing camera activated (with permission)</div>
+    </div>
+
+    <p class="intro">
+      <i>I uncovered the bathroom mirror. Big mistake? Maybe.</i>
+    </p>
+
+    <p>
+      Now every reflective surface shows... others. Not me. Them. The <b>“static people.”</b>
+    </p>
+
+   
+    <div class="section">
+      <h3 class="section-title">WEBCOM FEED <span class="tag">(LIVE)</span></h3>
+
+      <p class="hint">
+        If you grant permission: your face appears with glitch effects.<br/>
+        If you deny: a placeholder appears — <b>ACCESS DENIED - THEY'RE STILL WATCHING</b>
+      </p>
+
+     
+      <div class="camera-shell" id="cameraAllowed" style="display:none;">
+        <div class="camera-status">
+          <span class="dot live"></span> Camera Active • Front-facing
+        </div>
+
+        
+        <div class="camera-frame">
+          <video id="webcam" autoplay playsinline muted></video>
+
+         
+          <div class="glitch-overlay">
+            <div class="glitch-text">SIGNAL UNSTABLE</div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="camera-shell denied" id="cameraDenied">
+        <div class="camera-status">
+          <span class="dot denied"></span> ACCESS DENIED
+        </div>
+
+        <div class="camera-frame placeholder">
+          <div class="denied-message">
+            <div class="denied-title">ACCESS DENIED</div>
+            <div class="denied-subtitle">THEY'RE STILL WATCHING</div>
+            <div class="denied-static">▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="camera-controls">
+        <button class="btn" id="requestCameraBtn">ALLOW CAMERA</button>
+        <button class="btn danger" id="closeCameraBtn">CLOSE CAMERA</button>
+      </div>
+    </div>
+
+   
+    <div class="section trial">
+      <h3 class="section-title">Question 2 from The Trial</h3>
+      <p class="question">“What do you see in the mirror?”</p>
+    </div>
+
+    
+    <div class="section">
+      <h3 class="section-title">📝 USER CHOICE SECTION</h3>
+      <p><b>Describe what you see:</b></p>
+
+      
+      <div class="upload-row">
+        <button class="btn ghost" id="fakeCameraBtn">📷 Capture the anomaly</button>
+        <input type="file" id="imageUpload" accept="image/*" style="display:none;" />
+        <span class="upload-note">[IMAGE UPLOAD - Fake “Take Photo” button]</span>
+      </div>
+
+      <div class="or-divider">
+        <span>OR</span>
+      </div>
+
+      <p><b>Or describe in words:</b></p>
+
+      <div class="preset-list" role="group" aria-label="Mirror choices">
+        <button class="preset" data-choice="Myself, but wrong">
+          <strong>“Myself, but wrong”</strong><br/>
+          <span class="preset-sub">Eyes wrong, smile wrong, everything wrong</span>
+        </button>
+
+        <button class="preset" data-choice="The previous tenants">
+          <strong>“The previous tenants”</strong><br/>
+          <span class="preset-sub">Faces layered over mine, all screaming</span>
+        </button>
+
+        <button class="preset" data-choice="Nothing - it's just static">
+          <strong>“Nothing — it’s just static”</strong><br/>
+          <span class="preset-sub">Grey noise, moving shapes</span>
+        </button>
+
+        <button class="preset" data-choice="A doorway">
+          <strong>“A doorway”</strong><br/>
+          <span class="preset-sub">Something inviting me through</span>
+        </button>
+      </div>
+
+      <div class="panel">
+        <button class="btn post" id="submitObservationBtn">SUBMIT OBSERVATION</button>
+        <button class="btn save" id="closeCameraBtn2">CLOSE CAMERA</button>
+        <button class="btn danger" id="runAwayBtn">RUN AWAY</button>
+
+      </div>
+
+      
+      <div class="your-selection" id="yourSelection" style="display:none;">
+        <b>Your observation:</b> <span id="choiceText"></span>
+      </div>
+    </div>
+
+    
+    <div class="live-comments">
+      <h3 class="section-title">Comments <span class="tag">(Corrupted)</span></h3>
+
+      
+      <div class="comment">
+        <div class="comment-name">Your Reflection <span class="tag">(Now)</span>:</div>
+        <div class="comment-text">
+          "You chose: <span id="userChoiceEcho">[USER'S CHOICE]</span>. We remember that choice.
+          We are that choice."
+        </div>
+      </div>
+
+     
+      <div class="comment">
+        <div class="comment-name">Mirror-Mirror <span class="tag">(Multiple posts)</span>:</div>
+        <div class="comment-text mono">
+          come through<br/>
+          come through<br/>
+          come through<br/>
+          
+        </div>
+      </div>
+
+      
+      <div class="system-alert pin">
+        📌 <b>Admin Pin:</b> Due to anomalous activity, comments are now moderated.
+        Your submission is queued for approval.<br/>
+        <span class="faint">[APPROVAL ETA: NEVER]</span>
+      </div>
+    </div>
+
+    
+    <div class="next-day-container">
+      <button class="btn next" onclick="goToNextDay()">→ Next Day: DAY 5</button>
+    </div>
+  </div>
+
+  
+  <script>
+    function goToNextDay() {
+      
+      window.location.href = "day5.html";
+    }
+
+    
+    const fakeCameraBtn = document.getElementById("fakeCameraBtn");
+    const imageUpload = document.getElementById("imageUpload");
+    fakeCameraBtn?.addEventListener("click", () => imageUpload.click());
+
+    
+    const presets = document.querySelectorAll(".preset");
+    const yourSelection = document.getElementById("yourSelection");
+    const choiceText = document.getElementById("choiceText");
+    const userChoiceEcho = document.getElementById("userChoiceEcho");
+
+    presets.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const choice = btn.getAttribute("data-choice");
+        if (choiceText) choiceText.textContent = choice;
+        if (userChoiceEcho) userChoiceEcho.textContent = choice;
+        if (yourSelection) yourSelection.style.display = "block";
+      });
+    });
+
+    
+    const requestCameraBtn = document.getElementById("requestCameraBtn");
+    const closeCameraBtn = document.getElementById("closeCameraBtn");
+    const closeCameraBtn2 = document.getElementById("closeCameraBtn2");
+    const cameraAllowed = document.getElementById("cameraAllowed");
+    const cameraDenied = document.getElementById("cameraDenied");
+
+    requestCameraBtn?.addEventListener("click", () => {
+      
+      if (cameraAllowed) cameraAllowed.style.display = "block";
+      if (cameraDenied) cameraDenied.style.display = "none";
+    });
+
+    function closeCameraUI() {
+      if (cameraAllowed) cameraAllowed.style.display = "none";
+      if (cameraDenied) cameraDenied.style.display = "block";
+    }
+
+    closeCameraBtn?.addEventListener("click", closeCameraUI);
+    closeCameraBtn2?.addEventListener("click", closeCameraUI);
+  </script>
+</body>
+</html>
