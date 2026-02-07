@@ -1,0 +1,154 @@
+body {
+    background-color: #0b0b0b;
+    color: #cfcfcf;
+    font-family: "Courier New", Courier, monospace;
+
+    margin: 0;
+    padding: 40px 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.blog {
+    background-color: #111;
+
+    width: 600px;
+    max-width: 90%;
+
+    padding: 30px;
+
+    border: 1px solid #222;
+
+    box-shadow:
+        0 0 10px rgba(0,0,0,0.9),
+        0 0 20px rgba(50,0,0,0.4);
+}
+
+
+h1 {
+    color: #e0e0e0;
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+
+    text-shadow: 0 0 5px rgba(255,255,255,0.1);
+    text-align: center; /* add this */
+}
+
+.meta {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+
+.post p {
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.whisper {
+    color: #9a9a9a;
+
+    font-style: italic;
+
+    text-shadow: 0 0 3px rgba(255,255,255,0.1);
+}
+
+
+.horror-image-container {
+    text-align: center;
+
+    margin: 25px 0;
+}
+
+.horror-image {
+    width: 100%;
+
+    border: 1px solid #222;
+
+    filter: brightness(70%) contrast(120%);
+
+    transition: 0.4s;
+}
+
+.horror-image:hover {
+    filter: brightness(85%) contrast(140%);
+}
+
+.choices {
+    margin-top: 25px;
+}
+
+.choices h3 {
+    font-size: 16px;
+
+    margin-bottom: 15px;
+
+    color: #bbb;
+}
+
+button {
+    display: block;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    padding: 10px;
+
+    background-color: #151515;
+
+    color: #ccc;
+
+    border: 1px solid #333;
+
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f1f1f;
+
+    color: #fff;
+
+    border-color: #555;
+}
+
+
+#result {
+    margin-top: 20px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+.next-day-container {
+    text-align: right; 
+    margin-top: 50px;
+}
+
+#nextDayButton {
+    padding: 12px 22px;
+    background-color: #1f1f1f;
+    color: #ccc;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+#nextDayButton:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #555;
+}

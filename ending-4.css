@@ -1,0 +1,69 @@
+body {
+    background-color: #0b0b0b;
+    color: #cfcfcf;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.blog {
+    background-color: #111;
+    width: 600px;
+    max-width: 90%;
+    padding: 30px;
+    border: 1px solid #222;
+    box-shadow:
+        0 0 10px rgba(0,0,0,0.9),
+        0 0 20px rgba(50,0,0,0.4);
+}
+
+h1 {
+    color: #e0e0e0;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+h3 {
+    color: #ff6666;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px; 
+    text-shadow: 0 0 3px rgba(255,0,0,0.3);
+}
+
+.blog p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.userMad {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.userMad .cursed {
+    color: #ff0000;
+    font-weight: bold;
+    text-shadow: 0 0 8px red;
+}
+
+
+.grave {
+    text-align: center; 
+    margin: 25px 0;
+}
+
+.grave img {
+    display: block;   
+    margin: 0 auto;   
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #222;
+    animation: float 3s ease-in-out infinite alternate;
+}
