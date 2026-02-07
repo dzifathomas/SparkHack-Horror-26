@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DAY 5: Network Intrusion</title>
+    <link rel="stylesheet" href="blog5.css">
+</head>
+<body>
+
+<main class="blog">
+
+    <h1>📅 DAY 5: "Network Intrusion"</h1>
+
+    <div class="meta">
+        <div class="post-date">Posted: Friday, October 27 • 9:33 PM</div>
+    </div>
+
+    <div class="post">
+        <p>
+            I found the building's network. Every previous tenant left digital traces. 
+            I can access their final emails, search histories, panic notes.<br><br>
+
+            Connection: <span class="danger">Wi‑Fi: "7B_YOURE_NEXT"</span>
+        </p>
+    </div>
+
+
+    <div class="terminal">
+        <div class="terminal-header">TERMINAL</div>
+        <div class="terminal-body" id="terminalOutput">
+<pre>
+$ who
+alex   - active 30 days ago - STATUS: MISSING
+sam    - active 45 days ago - STATUS: GONE
+jordan - active 60 days ago - STATUS: HERE (???)
+you    - active now         - STATUS: ???
+
+$ cat warnings.log
+DO NOT TRUST MRS HENDERSON
+THE LANDLINE IS A TRAP
+THEY LEARN FROM YOUR FEARS
+ESCAPE IS A LIE
+</pre>
+        </div>
+
+        <div class="terminal-commands">
+            <button onclick="runCommand('trace')">trace_call landline</button>
+            <button onclick="runCommand('backup')">backup_blog --all</button>
+            <button onclick="runCommand('firewall')">firewall --enable --max</button>
+            <button onclick="runCommand('message')">message --to=alex --"how survive?"</button>
+        </div>
+    </div>
+
+
+    <div id="result"></div>
+
+    <div class="next-day-container">
+        <button onclick="goToNextDay()">→ Next Day: DAY 6</button>
+    </div>
+
+</main>
+<div id="systemNotification" class="notification-popup">
+    <div class="notification-header">System Alert</div>
+    <div class="notification-body">
+        Mrs. Henderson has requested remote desktop access
+    </div>
+    <div class="notification-actions">
+        <button onclick="notificationResponse('accept')">ACCEPT</button>
+        <button onclick="notificationResponse('deny')">DENY</button>
+        <button onclick="notificationResponse('block')">BLOCK USER</button>
+    </div>
+</div>
+
+
+<div id="emailNotification" class="notification-popup">
+    <div class="notification-header">New Email</div>
+    <div class="notification-body">
+        From: alex@7b-apartments.void<br>
+        Subject: "DON'T BACK ANYTHING UP"
+    </div>
+    <div class="notification-actions">
+        <button onclick="emailAction('mark')">MARK AS READ</button>
+        <button onclick="emailAction('reply')">REPLY</button>
+        <button onclick="emailAction('download')">DOWNLOAD ATTACHMENT?</button>
+    </div>
+</div>
+
+
+<script src="blog5.js"></script>
+</body>
+</html>
