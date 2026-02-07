@@ -1,0 +1,293 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #0b0b0b;
+    color: #cfcfcf;
+    font-family: "Courier New", Courier, monospace;
+
+    margin: 0;
+    padding: 40px 0;
+
+    display: flex;
+    flex-direction: column;   /* 🔑 THIS LINE */
+    align-items: center;      /* replaces justify-content:center */
+}
+
+  
+  
+  .page {
+    width: 760px;
+    max-width: 100%;
+  
+    background-color: #0f0f0f;
+    border: 1px solid #1f1f1f;
+  
+    padding: 28px;
+  
+    box-shadow:
+      0 0 12px rgba(0,0,0,0.95),
+      0 0 28px rgba(120, 0, 0, 0.20);
+  
+    border-radius: 10px;
+  }
+  
+  
+  .h1-box {
+    margin: 0 0 10px 0;
+    padding: 10px 12px;
+  
+    font-size: 22px;
+    letter-spacing: 0.5px;
+  
+    background: linear-gradient(90deg, rgba(140,0,0,0.18), rgba(0,0,0,0));
+    border-left: 3px solid rgba(160, 0, 0, 0.6);
+  
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.06);
+    color: #ececec;
+  }
+  
+  h2 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #bdbdbd;
+    font-weight: 700;
+  }
+  
+  h3 {
+    margin: 0 0 20px 0;
+    font-size: 12px;
+    color: #7f7f7f;
+    font-weight: 400;
+  }
+  
+  
+  p {
+    margin: 0 0 12px 0;
+    line-height: 1.65;
+    color: #cfcfcf;
+  }
+  
+  p i {
+    color: #a8a8a8;
+    text-shadow: 0 0 6px rgba(255,255,255,0.05);
+  }
+  
+  
+  .question {
+    margin-top: 18px;
+    margin-bottom: 12px;
+  
+    padding: 10px 12px;
+    border: 1px solid #242424;
+    background-color: #0b0b0b;
+  
+    color: #dfdfdf;
+    text-shadow: 0 0 6px rgba(255,255,255,0.05);
+  
+    border-radius: 8px;
+  }
+  
+  
+  .preset-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  
+    margin: 10px 0 22px 0;
+  }
+  
+  
+  .preset {
+    width: 100%;
+    text-align: left;
+  
+    padding: 12px 12px;
+  
+    background-color: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+  
+    color: #d3d3d3;
+    font-family: inherit;
+  
+    cursor: pointer;
+    transition: transform 0.08s ease, background-color 0.25s ease, border-color 0.25s ease;
+  }
+  
+  .preset strong {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+  
+  .preset:hover {
+    background-color: #161616;
+    border-color: #444;
+    transform: translateY(-1px);
+  }
+  
+  .preset:active {
+    transform: translateY(0px);
+  }
+  
+  
+  .panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  
+    margin: 18px 0 26px 0;
+  }
+  
+  
+  .btn {
+    padding: 12px 12px;
+    border-radius: 10px;
+  
+    font-family: inherit;
+    cursor: pointer;
+  
+    border: 1px solid #2a2a2a;
+    background-color: #101010;
+    color: #d0d0d0;
+  
+    transition: 0.25s;
+  }
+  
+  .btn:hover {
+    background-color: #171717;
+    border-color: #4a4a4a;
+    color: #ffffff;
+  }
+  
+  
+  .btn.post {
+    box-shadow: 0 0 16px rgba(180, 0, 0, 0.10);
+  }
+  
+  .btn.save {
+    box-shadow: 0 0 16px rgba(0, 110, 180, 0.08);
+  }
+  
+  .btn.delete {
+    box-shadow: 0 0 16px rgba(255, 120, 0, 0.06);
+  }
+  
+  
+  .live-comments {
+    margin-top: 10px;
+    padding: 16px;
+  
+    background-color: #0b0b0b;
+    border: 1px solid #1f1f1f;
+    border-radius: 12px;
+  }
+  
+  .section-title {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    color: #c8c8c8;
+    letter-spacing: 0.2px;
+  }
+  
+  
+  .comment {
+    padding: 12px;
+    margin-bottom: 10px;
+  
+    background-color: #101010;
+    border: 1px solid #232323;
+    border-radius: 10px;
+  }
+  
+  .comment-name {
+    font-size: 12px;
+    color: #bfbfbf;
+    margin-bottom: 6px;
+  }
+  
+  .comment-text {
+    font-size: 13px;
+    color: #d6d6d6;
+    line-height: 1.5;
+  }
+  
+ 
+  .tag {
+    color: #8a8a8a;
+    font-style: italic;
+  }
+  
+  
+  .system-alert {
+    margin-top: 12px;
+    padding: 12px;
+  
+    border-radius: 10px;
+    border: 1px solid rgba(180, 0, 0, 0.35);
+    background: rgba(120, 0, 0, 0.12);
+  
+    color: #e0c0c0;
+    font-size: 13px;
+  
+    box-shadow: 0 0 18px rgba(150, 0, 0, 0.12);
+  }
+  .h1-box {
+    text-align: center;
+  }
+  .horror-image-container {
+    text-align: center;
+  }
+
+
+  .horror-image {
+    width: 50%;       
+    max-width: 360px;  
+    height: auto;
+  }
+
+.page h3 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.next-day-container {
+  text-align: left;     /* centers it like the screenshot */
+  margin-top: 40px;
+}
+
+#nextDayButton {
+  background-color: transparent;   /* 🔑 removes white fill */
+  color: #cfcfcf;
+
+  border: 1px solid #444;
+  padding: 14px 28px;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  box-shadow:
+      inset 0 0 10px rgba(0,0,0,0.8),
+      0 0 15px rgba(0,0,0,0.9);
+
+  transition: all 0.25s ease;
+}
+
+#nextDayButton:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: #666;
+
+  box-shadow:
+      inset 0 0 15px rgba(0,0,0,0.9),
+      0 0 25px rgba(50,0,0,0.6);
+}
+
+  

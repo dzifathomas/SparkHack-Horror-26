@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="blog3.css">
+  <title>Day 3: Whispering Trials</title>
+</head>
+<script>
+  function goToNextDay() {
+
+    window.location.href = "Day 4.html";
+  }
+</script>
+<body>
+  <div class="page">
+    <h1 class="h1-box">Day 3: Whispering Trials</h1>
+   
+    <h3>Posted: Wednesday, October 25 - 11:03 PM</h3>
+
+    
+
+    <p><i>They're talking to me directly now. Through the computer speakers. Through the headphones even when they're unplugged.</i></p>
+    <div class="horror-image-container">
+        <img src="https://preview.redd.it/9pj6g5x8jfg51.jpg?width=1080&crop=smart&auto=webp&s=48944c000d80a99fbeaa303a66fe9f87393e2f88" alt="The walls are whispering" class="horror-image">
+      </div>
+    <p>
+      They call it "The Whispering Trial." Three questions.
+      Answer "truthfully" (whatever that means to them) and
+      I might survive the week.
+    </p>
+
+    <p class="question">Question 1: "What do you fear most?"</p>
+
+    <div class="preset-list">
+      <button class="preset"><strong>"Being trapped forever"</strong></button>
+      <button class="preset"><strong>"Losing my mind"</strong></button>
+      <button class="preset"><strong>"Nothing, I'm not afraid"</strong></button>
+      <button class="preset"><strong>"Why should I tell you?"</strong></button>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="panel">
+      <button class="btn post" id="postBtn">POST COMMENT</button>
+      <button class="btn save" id="saveBtn">SAVE FOR LATER</button>
+      <button class="btn delete" id="deleteBtn">DELETE DRAFT</button>
+    </div>
+
+    <!-- Live Comments -->
+    <div class="live-comments">
+      <h3 class="section-title">Live Comments (Real-time Updates)</h3>
+
+      <div class="comment">
+        <div class="comment-name">TheWalls <span class="tag">(Live)</span>:</div>
+        <div class="comment-text">
+          "We're waiting... Your fear tastes like... [STATIC]... loneliness? Interesting."
+        </div>
+      </div>
+
+      <div class="comment" id="yourComment" style="display:none;">
+        <div class="comment-name">You:</div>
+        <div class="comment-text" id="yourText"></div>
+      </div>
+
+      <div class="comment" id="analysisComment" style="display:none;">
+        <div class="comment-name">TheWalls <span class="tag">(30 seconds later)</span>:</div>
+        <div class="comment-text" id="analysisText">
+          "[RESPONSE ANALYSIS] Truth level: 78%. Acceptable. Question 2 tomorrow."
+        </div>
+      </div>
+
+      <div class="system-alert">
+        ⚠️ <b>System Alert:</b> Blog traffic anomaly detected: <b>1,042</b> current viewers from IP: <b>0.0.0.0</b>
+      </div>
+    </div>
+
+  </div>
+  <div class="next-day-container">
+    <button id="nextDayButton" onclick="goToNextDay()">
+      → Next Day: DAY 4
+    </button>
+  </div>
+
+</body>
+
+</html>
