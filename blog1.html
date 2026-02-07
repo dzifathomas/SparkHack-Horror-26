@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apartment 7B Chronicles</title>
+    <link rel="stylesheet" href="blog1.css">
+</head>
+<body>
+
+    <main class="blog">
+
+        <h1>DAY 1: The Welcome</h1>
+
+        <div class="meta">
+            Posted: Monday, October 23 • 8:14 PM
+        </div>
+
+        <div class="post">
+
+            <p>
+                Hey everyone,
+            </p>
+
+            <p>
+                So I'm subletting this apartment for a week while Alex is "traveling." Mrs. Henderson, the landlady, gave me the keys with the weirdest warning: "The walls whisper here. Don't answer back if you value your sanity."
+            </p>
+
+            <p class="whisper">
+                The place is... charmingly retro? That's a nice way of saying everything's from the 70s. Olive green fridge, wood paneling, and this ancient desktop computer that was left on. It has this blog open—Alex's, I guess.
+
+            </p>
+
+            <p>
+                Found some weird stuff already:
+
+                Scratches inside the closet door—not animal claws, more like... fingernails?
+                
+                All the mirrors are covered with sheets
+                
+                There's a landline that keeps getting calls from "Unknown"
+                
+                
+            </p>
+
+        </div>
+
+        <div class="horror-image-container">
+            <img src="assets/Day-1.jpg" 
+                 alt="Something is wrong here" 
+                 class="horror-image">
+        </div>
+
+        <div class="choices">
+
+            <h3>What should I do tonight?</h3>
+
+            <button onclick="makeChoice(2)">
+                🔍 Uncover a mirror
+            </button>
+
+            <button onclick="makeChoice(5)">
+                📞 Answer landline
+            </button>
+
+            <button onclick="makeChoice(1)">
+                💻 Check computer
+            </button>
+
+            <button onclick="makeChoice(0)">
+                😴 Go to sleep
+            </button>
+
+        </div>
+
+        <div id="result"></div>
+
+        <div class="next-day-container">
+            <button id="nextDayButton" onclick="goToNextDay()">
+                → Next Day: DAY 2
+            </button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
