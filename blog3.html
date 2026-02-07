@@ -83,18 +83,23 @@
       </div>
 
       <div class="system-alert">
-        ⚠️ <b>System Alert:</b> Blog traffic anomaly detected: <b>1,042</b> current viewers from IP: <b>0.0.0.0</b>
+         <b>System Alert:</b> Blog traffic anomaly detected: <b>1,042</b> current viewers from IP: <b>0.0.0.0</b>
       </div>
+
     </div>
+    <div class="next-day-container">
+      <button id="nextDayButton" onclick="goToNextDay()">
+        → Next Day: DAY 4
+      </button>
+    </div>
+  </div>
 
-  </div>
-  <div class="next-day-container">
-    <button id="nextDayButton" onclick="goToNextDay()">
-      → Next Day: DAY 4
-    </button>
-  </div>
   <script src="main.js"></script>
-
+<script>
+  function goToNextDay() {
+    window.location.href = "blog4.html";
+  }
+</script>
 </body>
 
 </html>

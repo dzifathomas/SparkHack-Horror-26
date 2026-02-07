@@ -29,7 +29,7 @@
 
 <main class="blog">
 
-    <h1>📅 DAY 5: "Network Intrusion"</h1>
+    <h1> DAY 5: "Network Intrusion"</h1>
 
     <div class="meta">
         <div class="post-date">Posted: Friday, October 27 • 9:33 PM</div>
@@ -44,7 +44,6 @@
         </p>
     </div>
 
-    <!-- TERMINAL -->
     <div class="terminal">
         <div class="terminal-header">TERMINAL</div>
         <div class="terminal-body" id="terminalOutput"></div>
@@ -56,7 +55,6 @@
             <button onclick="runCommand('message')">message --to=alex --"how survive?"</button>
         </div>
 
-        <!-- Confirmation message -->
         <div id="confirmationMessage" class="choice-confirmation-message">
             Your action has been recorded.
         </div>
@@ -69,9 +67,7 @@
 </main>
 
 <script>
-    // ------------------------
-    // Points system (hidden)
-    // ------------------------
+
     if (!localStorage.getItem("totalPoints")) {
         localStorage.setItem("totalPoints", "0");
     }
@@ -85,11 +81,8 @@
         choiceMade = true;
     }
 
-    // ------------------------
-    // Command buttons with confirmation message
-    // ------------------------
+
     function runCommand(command) {
-        // Assign points without showing them
         switch(command) {
             case "trace": makeChoice(1); break;
             case "backup": makeChoice(2); break;
@@ -97,17 +90,12 @@
             case "message": makeChoice(4); break;
         }
 
-        // Show confirmation message
         const msg = document.getElementById("confirmationMessage");
         msg.style.opacity = 1;
 
-        // Optional: hide again after 2 seconds
-        setTimeout(() => { msg.style.opacity = 0; }, 2000);
     }
 
-    // ------------------------
-    // Typewriter animation
-    // ------------------------
+
     const terminalLines = [
         "$ who",
         "alex   - active 30 days ago - STATUS: MISSING",
@@ -134,16 +122,12 @@
             terminalOutput.textContent += "\n";
             setTimeout(() => typeWriter(lines, i + 1, 0), 200);
         }
-        terminalOutput.scrollTop = terminalOutput.scrollHeight; // auto scroll
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
     }
 
     typeWriter(terminalLines);
-
-    // ------------------------
-    // Next day navigation
-    // ------------------------
     function goToNextDay() {
-        window.location.href = "Day 6.html";
+        window.location.href = "blog6.html";
     }
 </script>
 
