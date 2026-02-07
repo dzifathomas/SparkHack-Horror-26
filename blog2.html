@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Day 2</title>
+    <link rel="stylesheet" href="blog2.css">
+</head>
+
+<body>
+
+
+    <main class="blog">
+        <h1>Day 2: Static on the Line</h2>
+
+        <h3>Posted: Tuesday, October 24 • 9:47 PM</h3>
+
+
+        <p>
+            Okay, so last night I chose to [USER'S CHOICE APPEARS HERE].
+        </p>       
+        <p>
+            Today's developments:
+        </p>
+        <p>
+            - The Wi-Fi network keeps changing names it went from "7B_GUEST" to "7B_TRAPPED", and now it's showing "HELLO_[YOUR NAME]"
+        </p>
+        <p>
+            - Alex's files I found: A folder called "DON'T_OPEN" (of course I opened it)
+        </p>
+        <p>
+            - Voicemail transcription: "...don't look at the... static people... they're in the..."
+        </p>
+
+        <div class="imageOfHallway">
+            <img src="chu5ljo42g871.jpg" alt="creepy hallway" width="450" height="350">
+        </div>
+
+        <p>
+            Weirdest thing? This blog platform is acting up. Sometimes when I type, other words appear. Like right now I tried to type "coffee" and it came out "corpse".
+        </p>
+        
+    <div class="form-container">
+        <form id="rsvp-form" title="rsvp-form">
+        <label for="text"> Here you try it... </label>
+        <input type="text" id="text" name="text" />
+        
+        <button id="enter-button">Enter</button>
+    </form>
+    <div id="success-modal" class="modal">
+        <div class="modal-container">
+            <img id="modal-image" src="scaryimage.jpg" alt="cartoon corpse" width="1000" height="600">
+            <p id="modal-text">corpse</p>
+        </div>
+    </div>
+
+
+
+<div class="user-choice-section">
+    <p>--------------------------------------------------------------</p>
+    <h3> USER CHOICE SECTION:</h3>
+    <p>The folder "DON'T_OPEN" contains:</p>
+
+    <ul>
+        <li> voice_log_1.wav - 2:34 duration
+            <span title="Heavy breathing, whispering">(hover for details)</span>
+        </li>
+        <li> photo_east_wall.jpg - 247KB
+            <span title="Blurred figure in reflection">(hover for details)</span>
+        </li>
+        <li> final_message.txt - 1KB
+            <span title="Goodbye message? Will">(hover for details)</span>
+        </li>
+    </ul>
+
+    <p>Which file do I open first?</p>
+        <div class="choices">
+
+            <h3>What should I do tonight?</h3>
+
+            <button onclick="makeChoice(2)">
+                Listen to the audio
+            </button>
+
+            <button onclick="makeChoice(5)">
+                View the photo
+            </button>
+
+            <button onclick="makeChoice(1)">
+                Read the text file
+            </button>
+
+        </div>
+
+    
+    <p>--------------------------------------------------------------</p>
+    <h4>Comments Section:</h4>
+    <p><strong>MysteryReader42 (Deleted)</strong> [COMMENT REMOVED BY ADMIN]</p>
+    <p><strong>AlexTheFormerTenant (12 hours ago)</strong>: "if youre reading this im sorry i brought it here dont use the shower after midnight it comes through the steam" [USER ACCOUNT SUSPENDED]</p>
+    <p><strong>HauntHuntress (2 hours ago)</strong>: "The photo! Always the photo! It shows you what you're dealing with!" [...USER LAST SEEN 2 HOURS AGO...] </p>
+    <p><strong>StaticNoise (Just now)</strong>: "we see you reading we hear you typing we know your name" [BLOCKED BY SYSTEM] [IP TRACED: LOCAL NETWORK]</p>
+</div>
+
+
+
+
+    </div>
+
+    <div class="next-day-container">
+        <button onclick="goToNextDay()">
+            → Next Day: DAY 3
+        </button>
+    </div>
+
+
+    </main>
+
+
+
+<script>
+const form = document.getElementById("rsvp-form");
+const modal = document.getElementById("success-modal");
+const modalText = document.getElementById("modal-text");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    modalText.textContent = "corpse :3";
+
+    modal.style.display = "flex";
+
+    setTimeout(() => {
+        modal.style.display = "none";
+        modalText.textContent = "";
+    }, 3000);
+});
+
+function goToNextDay() {
+    window.location.href = "blog3.html";
+}
+</script>
+
+
+
+</body>
+</html>
